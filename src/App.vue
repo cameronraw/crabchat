@@ -2,10 +2,13 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import Greet from "./components/Greet.vue";
+import MainView from "./components/MainView.vue";
+
+const bypassLogin = true;
 </script>
 
 <template>
-  <div class="container">
+  <div v-if="!bypassLogin" class="container">
     <h1>CrabChat</h1>
 
     <div class="row">
@@ -14,6 +17,7 @@ import Greet from "./components/Greet.vue";
 
     <Greet />
   </div>
+  <MainView v-if="bypassLogin"/>
 </template>
 
 <style scoped>
