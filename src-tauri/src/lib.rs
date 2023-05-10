@@ -1,3 +1,4 @@
 pub mod apiwrapper;
 pub mod authhandler;
-pub mod redirecthandler;
+pub mod redirectserviceadapter;
+pub mod timehandler;
